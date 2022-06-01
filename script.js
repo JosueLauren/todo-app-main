@@ -89,7 +89,10 @@ function alterTheme(){
 
 function newTodo(event){
     if(event.key == 'Enter'){
-       if(event.target.value.trim() == '') alert('Digite um valor')
+       if(event.target.value.trim() == '') {
+        alert('Digite um valor')
+        return
+       }
 
        let todo = {
            id: List.length,
