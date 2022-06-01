@@ -98,7 +98,7 @@ function newTodo(event){
        }
 
        event.target.value = ''
-       List.push(todo)
+       List.unshift(todo)
        renderTodoList(List)
        atualizarThemeItens() 
        setQtdItems() 
