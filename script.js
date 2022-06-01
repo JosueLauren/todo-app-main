@@ -156,7 +156,9 @@ function drop(event){
     event.preventDefault()
 
     if(draScrEl !== event.target && event.target.getAttribute('draggable')) {
+    event.target.style.width = '0'
     draScrEl.innerHTML = event.target.innerHTML
+    event.target.style.width = '100%'
      event.target.innerHTML = event.dataTransfer.getData('text')
 
     todoItems.forEach((todo, indice) => {
