@@ -271,5 +271,6 @@ function completedTodos(){
 }
 
 function setQtdItems(){
-    qtdItems.textContent = `${List.length} items left`
+    let todosCompleted = List.filter(todo => !todo.completed)
+    qtdItems.textContent = `${todosCompleted.length} items left`
 }

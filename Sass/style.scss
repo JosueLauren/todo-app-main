@@ -117,8 +117,8 @@
             opacity: 1;
         }
 
-        &:active {
-            cursor: move;
+        &:hover {
+            cursor: grab !important;
         }
 
         .container-checkbox {
