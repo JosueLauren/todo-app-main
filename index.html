@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="bodyLight">
+  <header onclick="alterTheme()" class="header headerLight"></header>
+
+    <main class="container-todoList">
+
+      <div class="container-todoList-title">
+        <h3 class="todoList-title">Todo</h3>
+        <img src="./images/icon-moon.svg" alt="icon-moon">
+      </div>
+
+      <div class="container-input-todo style-default lightMode">
+        <span class="input-todo-circle lightMode"></span>
+        <input onkeydown="newTodo(event)" type="text" class="input-todo lightMode" id="" placeholder="Create a new todo...">
+      </div>
+
+      <div class="todos" id="todos"></div>
+
+      <footer class="footer-todoList style-default lightMode">
+        <span class="qtdItems">0 items left </span>
+        <div class="div-btns lightMode">
+          <button onclick="allTodos()">All</button>
+          <button onclick="activeTodos()">Active</button>
+          <button onclick="completedTodos()">Completed</button>
+        </div>
+        <button onclick="clearCompleted()">Clear Completed</button>
+      </footer>
+    </main>
+    <footer class="footer-app">
+        Drag and drop to reorder list       
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
