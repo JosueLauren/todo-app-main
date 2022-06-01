@@ -116,6 +116,9 @@
 .todoItem:hover .btn-excluirTodo {
   opacity: 1;
 }
+.todoItem:active {
+  cursor: move;
+}
 .todoItem .container-checkbox {
   display: block;
   position: relative;
