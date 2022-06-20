@@ -44,7 +44,8 @@
 }
 
 .container-todoList {
-    width: 500px;
+    width: 100%;
+    max-width: 600px;
     margin: auto;
     position: relative;
     top: -200px;
@@ -67,10 +68,11 @@
 
 .style-default {
     width: 100%;
-    height: 50px;
+    height: 70px;
     display: flex;
     align-items: center;
     padding: 10px;
+    font-size: 20px;
 }
 
 .todos div:first-child {
@@ -118,7 +120,7 @@
         }
 
         &:hover {
-            cursor: grab !important;
+            cursor: move !important;
         }
 
         .container-checkbox {
@@ -180,8 +182,8 @@
         }
 
         .btn-excluirTodo {
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             background-image: url(./../images/icon-cross.svg);
             background-repeat: no-repeat;
             background-position: center;
@@ -200,6 +202,7 @@
         border-bottom-right-radius: 5px;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         
+        
 
         button {
             background-color: transparent;
@@ -208,6 +211,7 @@
             opacity: 0.7;
             font-weight: $font-weigth-bold;
             cursor: pointer;
+            font-size: 16px;
 
             &:hover {
                color: hsl(220, 98%, 61%);
@@ -217,8 +221,8 @@
         span {
             color: $Dark-Grayish-Blue;
             font-weight: $font-weigth-bold;
-            font-size: 12px;
             opacity: 0.7;
+            font-size: 16px;
         }
 
         .div-btns {
@@ -242,6 +246,10 @@
         opacity: 0.4 !important;
     }
 
+    .btn-active {
+        color: $Bright-Blue !important;
+    }
+
 
 @media screen and (max-width: 600px) {
     .headerDark {
@@ -262,7 +270,7 @@
 
     .div-btns {
         position: absolute;
-        top: 70px;
+        top: 120px;
         right: 1px;
         width: 100%;
         height: 50px;

@@ -10,6 +10,7 @@ let divBtns = document.querySelector('.div-btns ')
 let body = document.querySelector('body')
 let todos = document.querySelector('.todos')
 let qtdItems = document.querySelector('.qtdItems')
+let BtsFooter = document.querySelectorAll('.div-btns button')
 
 let List = JSON.parse(window.localStorage.getItem('todoList')) || []
 
@@ -253,6 +254,7 @@ function activeTodos(){
 
     let activeTodos = List.filter(item => !item.completed)
 
+    activedBtn(event)
     renderTodoList(activeTodos)
     atualizarThemeItens()
     setQtdItems()
@@ -260,6 +262,7 @@ function activeTodos(){
 
 function allTodos(){
 
+    activedBtn(event)
     renderTodoList(List)
     atualizarThemeItens()
     setQtdItems()
@@ -268,6 +271,7 @@ function allTodos(){
 function completedTodos(){
     let CompletedTodos = List.filter(item => item.completed)
 
+    activedBtn(event)
     renderTodoList(CompletedTodos)
     atualizarThemeItens()
     setQtdItems()
@@ -276,4 +280,14 @@ function completedTodos(){
 function setQtdItems(){
     let todosCompleted = List.filter(todo => !todo.completed)
     qtdItems.textContent = `${todosCompleted.length} items left`
+}
+
+function activedBtn(event){
+
+    BtsFooter.forEach(btn => {
+        btn.classList.remove('btn-active')
+    })
+
+    event.target.classList.add('btn-active')
+
 }
